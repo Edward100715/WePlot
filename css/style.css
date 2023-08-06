@@ -1,0 +1,537 @@
+/************ Custom Font ************/
+
+/* Definición de fuentes personalizadas */
+@font-face {
+  font-family: Centra; /* Nombre de la familia de fuente personalizada */
+  src: url("./assets/font/CentraNo2-Bold.ttf"); /* Ruta a la fuente en negrita */
+  font-weight: 700; /* Peso de la fuente en negrita */
+}
+
+@font-face {
+  font-family: Centra;
+  src: url("./assets/font/CentraNo2-Medium.ttf");
+  font-weight: 500; /* Peso de la fuente en medio */
+}
+
+@font-face {
+  font-family: Centra;
+  src: url("./assets/font/CentraNo2-Book.ttf");
+  font-weight: 400; /* Peso de la fuente normal */
+}
+
+/************ Default Css ************/
+
+/* Estilo general para todos los elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Comportamiento de desplazamiento suave y espacio de desplazamiento superior */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+/* Estilo para el cuerpo del documento */
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #fff !important;
+  color: #fff !important;
+  font-family: "Centra", sans-serif !important; /* Tipo de fuente principal */
+}
+
+/* Estilos para los encabezados */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+/* Estilos para párrafos, enlaces, listas, botones y listas desordenadas */
+p, a, li, button, ul {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  text-decoration: none;
+}
+
+/* Estilo para enlaces cuando se encuentran en estado de "hover" */
+a:hover {
+  text-decoration: none;
+}
+
+/* Estilo para imágenes */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Estilo para botones */
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+/* Eliminar resaltado del contorno al enfocar campos de entrada, áreas de texto y elementos de selección */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+/* Estilos específicos para pantallas anchas */
+@media (min-width: 1700px) {
+  main .container {
+    max-width: 100%;
+    padding: 0 150px;
+  }
+}
+
+/* Estilo para párrafos de éxito */
+p.success {
+  color: green;
+}
+
+/* Estilo para párrafos de peligro */
+p.danger {
+  color: red;
+}
+
+
+/************ index.html Css ************/
+
+/* Estilos para el contenedor principal */
+.divp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+}
+
+/* Estilos para la imagen dentro del contenedor */
+.divp img {
+  width: 400px;
+  border: 4px solid rgb(159, 43, 226);
+  border-radius: 25px;
+}
+
+/* Estilos para el contenedor de botones */
+#div-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Estilos para los botones */
+.btnp {
+  background-color: black;
+  padding: 15px;
+  margin: 50px;
+  border: 2px solid blueviolet;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Estilos para los botones cuando se encuentran en estado de "hover" */
+.btnp:hover {
+  opacity: 0.8;
+  transition: 0.6s;
+  padding: 18px;
+  box-shadow: 1px 1px 10px 1px blue;
+}
+
+
+/************ registro.php Css ************/
+
+/* Estilos para el contenedor principal #divp */
+#divp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+}
+
+/* Estilos para la imagen dentro de #divp */
+#divp img {
+  width: 300px;
+  border: 4px solid rgb(159, 43, 226);
+  border-radius: 25px;
+}
+
+/* Estilos para el contenedor de botones #div-buttons */
+#div-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Estilos para el botón #btnp */
+#btnp {
+  background-color: black;
+  padding: 15px;
+  margin: 0px 230px 0px 0px;
+  border: 2px solid blueviolet;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Estilos para el botón #btnp cuando se encuentra en estado de "hover" */
+#btnp:hover {
+  opacity: 0.8;
+  transition: 0.6s;
+  padding: 18px;
+  box-shadow: 1px 1px 10px 1px blue;
+}
+
+/* Estilos para el contenedor .contenedor */
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Estilos para el contenedor de imagen y formulario .imagen-formulario-container */
+.imagen-formulario-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para el contenedor de imagen .imagen-container y el contenedor de formulario .formulario-container */
+.imagen-container,
+.formulario-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para la clase .imagen */
+.imagen {
+  max-width: 650px; 
+  height: auto;
+}
+
+/* Estilos para el contenedor de formulario .formulario-container */
+.formulario-container {
+  display: flex; 
+  flex-direction: column; /* Dirección de columna para los elementos flexibles */
+  align-items: center;
+}
+
+/* Estilos para el formulario .formulario */
+.formulario {
+  border: 1px solid #ccc;
+  border-radius: 5px; 
+  width: 750px !important;
+}
+
+/* Estilos para la imagen dentro del formulario */
+.formulario img {
+  padding-right: 180px;
+  padding-left: 10px;
+  width: 700px; 
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+/* Estilos para el formulario */
+form {
+  background-color: white;
+  padding-left: 150px;
+  padding-right: 100px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+}
+
+/* Estilos para el contenedor de campo .campo-container */
+.campo-container {
+  display: flex;
+  justify-content: space-between; 
+  width: 100%; 
+}
+
+/* Estilos para los campos individuales .campo */
+.campo {
+  padding-right: 30px; 
+  flex: 1; 
+}
+
+/* Estilos para los textos de los campos .campo p */
+.campo p {
+  margin: 0px 0px 5px 0px; 
+  font-weight: bold;
+  color: rgb(97, 97, 97);
+}
+
+/* Estilos para las entradas de los campos .campo input */
+.campo input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 2px solid #8a8a8a; 
+  border-radius: 8px;
+}
+
+/* Estilos para el segundo contenedor de campo #campo-container2 */
+#campo-container2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Estilos para el segundo campo #campo2 */
+#campo2 {
+  padding-right: 280px; 
+  flex: 1;
+}
+
+/* Estilos para los textos de los campos en el segundo campo del formulario */
+#campo2 p {
+  margin: 0px 0px 5px 0px;
+  font-weight: bold;
+  color: rgb(97, 97, 97);
+}
+
+/* Estilo para subir foto en el contenedor de campo */
+#campo-container {
+  display: flex; 
+  align-items: center; 
+  margin-top: 2.5px;
+}
+
+/* Estilo para el botón de carga de archivo personalizado */
+#custom-file-upload {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-image: url("../assets/img/perfil.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer; 
+  overflow: hidden; 
+  margin-right: 8px;
+}
+
+/* Estilo para el input[type="file"] dentro del botón personalizado */
+#custom-file-upload input[type="file"] {
+  display: none;
+}
+
+/* Estilo para el contenedor de texto */
+#texto-container {
+  display: flex; 
+  flex-direction: column; 
+  margin-left: 20px;
+}
+
+/* Estilo para el párrafo "Texto encima" en el contenedor de texto */
+#texto-container #texto-arriba {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: black;
+  padding-bottom: 5px; 
+}
+
+/* Estilo para la imagen dentro del párrafo "Texto encima" */
+#texto-container #texto-arriba img {
+  margin-left: 5px; 
+  height: 18px;
+  width: 210px;
+}
+
+/* Estilo para el párrafo "Subir archivo" en el contenedor de texto */
+#texto-container #texto-abajo {
+  font-size: 13px;
+  color: #555;
+  margin-right: 213px; 
+  margin-bottom: 30px; 
+}
+
+/* Estilos para el botón "Unirme a Weplot" */
+.btn {
+  background-color: rgb(180, 0, 180); 
+  color: white; 
+  padding: 10px 30px 10px;
+  border: none; 
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px;
+  letter-spacing: 1px; 
+  box-shadow: 10px 10px 10px rgb(184, 184, 184);
+}
+
+/* Estilos para el botón deshabilitado */
+.btn:disabled {
+  background-color: rgb(214, 214, 214);
+  color: rgb(128, 128, 128);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Estilos para el botón al pasar el cursor por encima, excluyendo los botones deshabilitados */
+.btn:hover:not(:disabled) {
+  background-color: rgb(128, 0, 89);
+}
+
+/* Estilos para el contenedor de texto y botón "Inicia sesión aquí" */
+.campo-container3 {
+  margin-bottom: 30px;
+  margin-top: 24px;
+  font-weight: 550;
+  display: flex;
+  margin-left: 150px;
+}
+
+/* Estilos para el texto dentro del contenedor de "Inicia sesión aquí" */
+.campo-container3 p {
+  color: rgb(44, 44, 44);
+  font-size: 15px;
+}
+
+/* Estilos para el botón dentro del contenedor de "Inicia sesión aquí" */
+.campo-container3 button {
+  color: mediumorchid;
+  font-size: 15px;
+  margin-left: 10px; 
+  font-weight: 550;
+  cursor: pointer;
+}
+
+/************ iniciar.php Css ************/
+
+/* Estilos para el formulario de inicio de sesión */
+.inic-formulario {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  background-color: #f7f7f7;
+  margin-top: 50px;
+}
+
+/* Estilos para el encabezado h2 */
+h2 {
+  color: blueviolet; 
+  margin: 0px 50px 20px;
+}
+
+/* Estilos para el formulario dentro del contenedor .inic-formulario */
+.inic-formulario form {
+  display: flex;
+  flex-direction: column; 
+}
+
+/* Estilos para los párrafos dentro del formulario */
+.inic-formulario p {
+  font-size: 14px; 
+  font-weight: bold; 
+  margin-bottom: 5px; 
+  color: black; 
+}
+
+/* Estilos para los campos de entrada de texto, email y contraseña */
+.inic-formulario input[type="text"],
+.inic-formulario input[type="email"],
+.inic-formulario input[type="password"] {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Estilos para el botón de envío del formulario */
+.inic-formulario input[type="submit"] {
+  padding: 10px;
+  background-color: #28a745; 
+  color: #fff; 
+  border: none; 
+  border-radius: 3px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+/************ datosp.php Css ************/
+
+/* Estilos para la información del usuario en el contenedor .datos */
+.datos {
+  width: 40%;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  background-color: #f6e1ff;
+  text-align: center;
+}
+
+/* Estilos para los párrafos dentro del contenedor .datos */
+.datos p {
+  font-size: 16px;
+  margin: 8px 0;
+  color: black;
+}
+
+/* Estilos para las imágenes dentro del contenedor .datos */
+.datos img {
+  max-width: 100px;
+  max-height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+
+/************ admin.php Css ************/
+
+/* Estilos para la tabla de usuarios */
+.tabla-usuarios {
+  width: 90%;
+  margin: 100px auto;
+  border-collapse: collapse;
+}
+
+/* Estilos para las celdas de encabezado y celdas de datos de la tabla */
+.tabla-usuarios th,
+.tabla-usuarios td {
+  padding: 5px;
+  text-align: left;
+  border: 1px solid #ccc;
+  color: black;
+}
+
+/* Estilos para las celdas de encabezado de la tabla */
+.tabla-usuarios th {
+  background-color: #f2f2f2;
+  color: blueviolet;
+}
+
+/* Estilos para las filas pares de la tabla */
+.tabla-usuarios tr:nth-child(even) {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+/* Estilos para el enlace de eliminación #eli */
+#eli {
+  color: #f00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Estilos para el enlace de eliminación #eli cuando se pasa el cursor */
+#eli:hover {
+  text-decoration: underline;
+}
